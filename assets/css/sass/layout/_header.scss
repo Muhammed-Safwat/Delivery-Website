@@ -1,0 +1,109 @@
+@import '../helper/mixin';
+
+.header{  
+    padding:20px  0 ; 
+    width: 100%;
+    background-color: var(--body-color);
+    // position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: .5s;
+    &.sticky-header{
+      position: fixed;
+      box-shadow: 0px 3px 15px #0000001c;
+      padding:8px 0 ;
+    }
+    
+  .container{
+      height:50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    a.logo{
+      font-size: 18px;
+      color: var(--title-color);
+      font-weight: 600;
+    }
+    .menu{
+      ul.list{
+        @include minMobile(){
+          display: flex;
+          align-items: center;
+          gap:30px;
+        }
+        @include maxMobile(){
+          transition: all .5s ;
+          position: fixed;
+          top:-300px ;
+          position: fixed;
+          background:  var(--body-color);
+          width: 84%;
+          right: 8%;
+          border-radius: 20px;
+          text-align: center;
+          justify-content: center;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          box-shadow: 0 0 20px #00000021;
+          transition: all .5s ;
+        
+        .change-thems{
+          color: var(--title-color);
+          position: absolute;
+          right: 0;
+          right: 30px;
+          top: 22px;
+        }
+      }
+      }
+
+        li{
+          a{
+            color: var(--title-color);
+            font-weight:600;
+          }
+        }
+
+    }
+    .grid{
+        display:block; 
+        color: var(--title-color);
+        font-weight: 400;
+        font-style: normal;
+        cursor: pointer;
+        @include minMobile(){
+          display:none;
+        }
+    }
+    .order-button{
+      display: none;
+      padding: 0.5rem 1.5rem;
+      @include minMedium(){
+        display: block ;
+      }
+    }
+  }
+}
+
+.header .container .menu ul.list.show-menu{
+
+  top: 85px;
+
+}
+
+.item.active{
+  position: relative;
+}
+.item.active::after{
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--title-color) ;
+  right: calc(50% - 2px);
+  bottom: -9px;
+}

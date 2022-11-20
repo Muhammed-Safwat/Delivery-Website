@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    // =============== BOXICONS ===============
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css')
+    // ================== BOOTSTRAP ============== 
+    link(rel='stylesheet' , href='assets/vendor/bootstrap/css/bootstrap.min.css')
+    // ================== Font Awesome ============== 
+    link(rel='stylesheet' , href='assets/vendor/fontawesome/css/all.min.css')
+    // =============== CSS ===============
+    link(rel='stylesheet', href='assets/css/css/style.css')
+    title Responsive website delivery
+  body 
+    include layout/_header.pug
+
+    include pages/_homepage.pug
+
+    include layout/_footer
+    
+    // =============== SCROLL UP ===============
+    a.scroll-up(href='#')
+      i.bx.bx-up-arrow-alt
+    .overlay
+    // =============== MAIN JS ===============
+    script(src='assets/js/main.js')

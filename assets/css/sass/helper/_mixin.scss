@@ -1,0 +1,16 @@
+@mixin minMobile(){
+  @media(min-width: 767px){
+    @content 
+  }
+};
+@mixin maxMobile(){
+  @media(max-width: 767px){
+    @content 
+  }
+};
+
+@mixin minMedium(){
+  @media(min-width: 992px){
+    @content 
+  }
+};

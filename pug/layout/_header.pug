@@ -1,0 +1,18 @@
+header#header.header
+  .container
+    a.logo(href='#') Delivery
+    #menu.menu
+      ul.list
+        li.item.active("data-section"='homepage')
+          a.link.active-link(href='#home') Home
+        li.item("data-section"='about')
+          a.link(href='#about') About us
+        li.item("data-section"='services')
+          a.link(href='#services') Services
+        li.item("data-section"='contact')
+          a.link(href='#contact') Contact us
+        .change-thems
+            span.circle(data-theme='light')
+    .grid#grid
+      i.bx.bx-grid-alt
+    a.button.order-button(href='#') Order Now!
